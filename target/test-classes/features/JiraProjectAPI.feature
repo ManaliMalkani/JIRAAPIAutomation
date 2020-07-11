@@ -37,12 +37,18 @@ And get "key" from response body
 
 Scenario: Get Project in the Jira
 
-Given User login with valid session id and project key and Get Project
+Given User login with valid session id and project key
 When user calls "GetProjectAPI" with "GET" http Request
 Then the API call got success with status code 200
 And get "self" from response body
 And get "id" from response body
 And get "key" from response body
+
+Scenario: Get Project Roles
+
+Given User login with valid session id and project key
+When user calls "GetProjectRolesAPI" with "GET" http Request
+Then the API call got success with status code 200
 
 Scenario: Delete a Project in the Jira
 

@@ -26,6 +26,23 @@ public class TestDataBuild {
 				"}";
 	}
 	
+public String UpdateIssueAPIPayload(){
+		
+		return"{\r\n" + 
+				"	\"fields\": {\r\n" + 
+				"        \"project\": {\r\n" + 
+				"            \"key\": \"RES\"\r\n" + 
+				"        },\r\n" + 
+				"        \"summary\": \"Manali Rest API Automation Testing\",\r\n" + 
+				"        \"description\": \"Rest API Automation\",\r\n" + 
+				"        \"issuetype\": {\r\n" + 
+				"            \"name\": \"Bug\"\r\n" + 
+				"        }\r\n" + 
+				"        }\r\n" + 
+				"       \r\n" + 
+				"}";
+	}
+	
 public String AddCommentAPIPayload(String expectedMessage){
 		
 		return"{\r\n" + 
@@ -35,7 +52,18 @@ public String AddCommentAPIPayload(String expectedMessage){
 				"        \"value\": \"Administrators\"\r\n" + 
 				"    }\r\n" + 
 				"}";
+	}public String UpdateCommentAPIPayload(String expectedMessage){
+		
+		return"{\r\n" + 
+				"    \"body\": \""+expectedMessage+"update"+"\",\r\n" + 
+				"    \"visibility\": {\r\n" + 
+				"        \"type\": \"role\",\r\n" + 
+				"        \"value\": \"Administrators\"\r\n" + 
+				"    }\r\n" + 
+				"}";
 	}
+
+
 
 public String CreateProjectAPIPayload(){
 	
@@ -71,6 +99,28 @@ public String UpdateUserAPIPayload(){
 			"    \"password\": \"admin@123\",\r\n" + 
 			"    \"emailAddress\": \"manali.malkani@atlassian.com\",\r\n" + 
 			"    \"displayName\": \"Manali of Atlassian\"\r\n" + 
+			"}";
+}
+
+public String AssignAPIPayload(){
+	
+	return "{\r\n" + 
+			"    \"name\": \"manali.malkani\"\r\n" + 
+			"}";
+}
+
+public String CreateGroup(){
+	
+	return "{\r\n" + 
+			"    \"id\": \"https://docs.atlassian.com/jira/REST/schema/add-group#\",\r\n" + 
+			"    \"title\": \"Manali Group\",\r\n" + 
+			"    \"type\": \"object\",\r\n" + 
+			"    \"properties\": {\r\n" + 
+			"        \"name\": {\r\n" + 
+			"            \"type\": \"string\"\r\n" + 
+			"        }\r\n" + 
+			"    },\r\n" + 
+			"    \"additionalProperties\": false\r\n" + 
 			"}";
 }
 

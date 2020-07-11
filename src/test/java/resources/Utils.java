@@ -28,7 +28,8 @@ public class Utils {
 			req= new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
 					.addFilter(RequestLoggingFilter.logRequestTo(log))
 					.addFilter(ResponseLoggingFilter.logResponseTo(log))
-					.setContentType(ContentType.JSON).build();
+					.setContentType(ContentType.JSON)
+					.build();
 			return req;
 		}
 		return req;

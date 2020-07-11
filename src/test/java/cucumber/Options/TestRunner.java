@@ -6,8 +6,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features", glue={"stepDefinitions"})
+@CucumberOptions(features="src/test/java/features",plugin="json:target/jsonReports/cucumber-report.json", glue={"stepDefinitions"})
 //,tags= "@AddPlace")
 public class TestRunner {
 
 }
+//https://confluence.atlassian.com/adminjiraserver073/configuring-secure-administrator-sessions-861254024.html#ConfiguringSecureAdministratorSessions-DisablingSecureAdministratorSessions

@@ -1,0 +1,3279 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-10T22:28:15.865Z",
+        "line": 3,
+        "name": "Verify Login for Jira API",
+        "description": "",
+        "id": "validating-jira-issue-api-s;verify-login-for-jira-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1007000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User create a new session with \"UserName\" and \"Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UserName\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Password\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_create_a_new_session_with_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1597000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls \"CreateNewSession\" with \"Post\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CreateNewSession\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1197000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"session.name\" in response body is \"JSESSIONID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"session.name\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"JSESSIONID\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "get \"session.value\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"session.value\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:19.840Z",
+        "line": 11,
+        "name": "Get Jira Group",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-jira-group",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User login with valid session id and Get a Jira Group",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_get_a_jira_group()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 103000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user calls \"GetGroupAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetGroupAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:19.962Z",
+        "line": 17,
+        "name": "Get Jira uses from Group",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-jira-uses-from-group",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User login with valid session id and Get a Jira Group",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_get_a_jira_group()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user calls \"GetGroupUsersAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetGroupUsersAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:20.017Z",
+        "line": 23,
+        "name": "Get Jira User",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-jira-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User login with valid session id and is valid user",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_is_valid_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user calls \"GetUserAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetUserAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get \"name\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "get \"emailAddress\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailAddress\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:20.138Z",
+        "line": 32,
+        "name": "Update Jira User",
+        "description": "",
+        "id": "validating-jira-issue-api-s;update-jira-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User login with valid session id and update the user information",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_update_the_user_information()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 82000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user calls \"UpdateUserAPI\" with \"PUT\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdateUserAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"PUT\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "get \"name\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "get \"emailAddress\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailAddress\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "get \"displayName\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"displayName\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:20.312Z",
+        "line": 43,
+        "name": "Add Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;add-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User login with valid Session Id",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 696000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user calls \"CreateIssueAPI\" with \"Post\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CreateIssueAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the API call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "get \"id\" from response body and save it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body_and_save_it(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:21.076Z",
+        "line": 52,
+        "name": "Assign a user in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;assign-a-user-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "User login with valid Session Id and IssueID and assignee details",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id_and_assignee_details()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 364000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user calls \"AssignAPI\" with \"Put\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AssignAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Put\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:21.476Z",
+        "line": 57,
+        "name": "Add Comment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;add-comment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "User login with valid Session Id and IssueID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 572000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user calls \"AddCommentAPI\" with \"Post\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddCommentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "the API call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "get \"author.name\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.name\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "get \"author.key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "get \"body\" from response body and save it and compare it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"body\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body_and_save_it_and_compare_it(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "get \"id\" from response body and store it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body_and_store_it(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:22.195Z",
+        "line": 69,
+        "name": "Update Comment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;update-comment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "User login with valid Session Id and IssueID and CommentID to update the comment",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id_and_comment_id_to_update_the_comment()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 651000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "user calls \"UpdateCommentAPI\" with \"Put\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdateCommentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Put\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 28000000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27000000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "get \"author.name\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.name\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "get \"author.key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "get \"id\" from response body and store it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body_and_store_it(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:22.998Z",
+        "line": 80,
+        "name": "Get Comment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-comment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "User login with valid Session Id and IssueID and CommentID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id_and_comment_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "user calls \"GetCommentAPI\" with \"Get\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetCommentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "get \"author.name\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.name\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "get \"author.key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"author.key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "get \"body\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"body\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:23.167Z",
+        "line": 92,
+        "name": "Get Statuses of Issues in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-statuses-of-issues-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "User login with valid session id and is valid user",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_is_valid_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 40000000,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user calls \"GetStatusesAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetStatusesAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:23.237Z",
+        "line": 98,
+        "name": "Get Status of Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-status-of-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "User login with valid Session Id and Status name",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_status_name()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user calls \"GetStatusAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetStatusAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:23.341Z",
+        "line": 105,
+        "name": "Get Status Categories in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-status-categories-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "User login with valid session id and is valid user",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_is_valid_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120000000,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "user calls \"GetStatuscategoriesAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetStatuscategoriesAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:23.492Z",
+        "line": 111,
+        "name": "Get Status Category in Jira for Status name",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-status-category-in-jira-for-status-name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "User login with valid session id and valid status name",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_valid_status_name()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 30000000,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "user calls \"GetStatuscategoryAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetStatuscategoryAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 39
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:23.531Z",
+        "line": 116,
+        "name": "Add Attachment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;add-attachment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "User login with valid Session Id, header and IssueID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_header_and_issue_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 440000000,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "user calls \"AddAttachmentAPI\" with \"Post\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddAttachmentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 121,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 122,
+            "name": "get \"filename\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"filename\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 123,
+            "name": "get \"created\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 124,
+            "name": "get \"size\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"size\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 125,
+            "name": "get \"content\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"content\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "get \"id\" from response and save it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_and_save_it(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:24.147Z",
+        "line": 128,
+        "name": "Get Attachment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-attachment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 130,
+            "name": "User login with valid Session Id and attachment ID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_attachment_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 65000000,
+              "status": "passed"
+            },
+            "line": 131,
+            "name": "user calls \"GetAttachmentAPI\" with \"Get\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetAttachmentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 132,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 133,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 134,
+            "name": "get \"filename\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"filename\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 135,
+            "name": "get \"created\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "get \"size\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"size\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "get \"content\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"content\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:24.342Z",
+        "line": 139,
+        "name": "Remove Attachment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;remove-attachment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 141,
+            "name": "User login with valid Session Id and attachment ID and remove the attachmentId",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_attachment_id_and_remove_the_attachment_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 548000000,
+              "status": "passed"
+            },
+            "line": 142,
+            "name": "user calls \"DeleteAttachmentAPI\" with \"Delete\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeleteAttachmentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Delete\"",
+                  "offset": 38
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 143,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:24.898Z",
+        "line": 145,
+        "name": "Update Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;update-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "User login with valid Session Id and Jira ID for updating the existing issue",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_jira_id_for_updating_the_existing_issue()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 347000000,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "user calls \"UpdateIssueAPI\" with \"PUT\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdateIssueAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"PUT\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 148,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:25.254Z",
+        "line": 150,
+        "name": "Get the issue details",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-the-issue-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 152,
+            "name": "User login with valid Session Id and Jira ID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_jira_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 145000000,
+              "status": "passed"
+            },
+            "line": 153,
+            "name": "user calls \"GetIssueAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetIssueAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30000000,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "get \"fields.comment.comments[0].id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fields.comment.comments[0].id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "line": 159,
+            "name": "get \"fields.attachment.filename\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fields.attachment.filename\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:25.613Z",
+        "line": 161,
+        "name": "Get All Workflows in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-all-workflows-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 163,
+            "name": "User login with valid Session ID to a valid Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_to_a_valid_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113000000,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "user calls \"GetAllWorkflowsAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetAllWorkflowsAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 43000000,
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 279000000,
+              "status": "passed"
+            },
+            "line": 167,
+            "name": "get \"title\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:26.057Z",
+        "line": 169,
+        "name": "Get All Types of isssues",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-all-types-of-isssues",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "User login with valid Session ID to a valid Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_to_a_valid_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 172,
+            "name": "user calls \"GetIssueAllTypes\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetIssueAllTypes\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 173,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "line": 174,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 175,
+            "name": "get \"description\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"description\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:26.133Z",
+        "line": 177,
+        "name": "Get Notification Schemes",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-notification-schemes",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 179,
+            "name": "User login with valid Session ID to a valid Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_to_a_valid_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 25000000,
+              "status": "passed"
+            },
+            "line": 180,
+            "name": "user calls \"GetNotificationSchemes\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetNotificationSchemes\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 181,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "get \"total\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"total\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "get \"maxResults\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"maxResults\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:26.202Z",
+        "line": 185,
+        "name": "Get Property",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-property",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "User login with valid Session ID to a valid Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_to_a_valid_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11804000000,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "user calls \"GetProperty\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetProperty\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c401\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(stepDefinitions.java:67)\r\n\tat ✽.the API call got success with status code 200(file:///C:/Users/S900226/workspace/jiraapi/src/test/java/features/JiraApi.feature:189)\r\n",
+              "duration": 3000000,
+              "status": "failed"
+            },
+            "line": 189,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 190,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 191,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:38.028Z",
+        "line": 193,
+        "name": "Delete Comment for Existing Issue in Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;delete-comment-for-existing-issue-in-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "User login with valid Session Id and IssueID and CommentID",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id_and_comment_id()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 373000000,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "user calls \"DeleteCommentAPI\" with \"Delete\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeleteCommentAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Delete\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 197,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:38.408Z",
+        "line": 200,
+        "name": "Delete the Issue",
+        "description": "",
+        "id": "validating-jira-issue-api-s;delete-the-issue",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 202,
+            "name": "User login with valid Session Id and IssueID for Deleting the Issue",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_issue_id_for_deleting_the_issue()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 57000000,
+              "status": "passed"
+            },
+            "line": 203,
+            "name": "user calls \"DeleteIssueAPI\" with \"DELETE\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeleteIssueAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"DELETE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 204,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Jira Issue API\u0027s",
+    "description": "",
+    "id": "validating-jira-issue-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/JiraApi.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-10T22:28:38.473Z",
+        "line": 5,
+        "name": "Get Permissions of the CurrentUser",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-permissions-of-the-currentuser",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User login with valid Session ID to a valid Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_to_a_valid_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 45000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user calls \"GetPermissionsAPI\" with \"Get\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetPermissionsAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:38.533Z",
+        "line": 11,
+        "name": "Create a Project in the Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;create-a-project-in-the-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User login with valid session id and create a project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_create_a_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4474000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user calls \"CreateProjectAPI\" with \"Post\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CreateProjectAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the API call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "get \"key\" from response body and save the key",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body_and_save_the_key(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:43.058Z",
+        "line": 20,
+        "name": "Update a Project in the Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;update-a-project-in-the-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User login with valid session id and valid \"project_id\" and Update a project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"project_id\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_valid_and_update_a_project(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user calls \"UpdateProjectAPI\" with \"PUT\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdateProjectAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"PUT\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:43.143Z",
+        "line": 29,
+        "name": "Get All Projects in the Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-all-projects-in-the-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User login with valid session id and Get all Project",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_get_all_project()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user calls \"GetAllProjectsAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetAllProjectsAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:43.299Z",
+        "line": 38,
+        "name": "Get Project in the Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-project-in-the-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User login with valid session id and project key",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_project_key()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "user calls \"GetProjectAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetProjectAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "get \"self\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"self\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "get \"id\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "get \"key\" from response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"key\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.get_from_response_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:43.378Z",
+        "line": 47,
+        "name": "Get Project Roles",
+        "description": "",
+        "id": "validating-jira-issue-api-s;get-project-roles",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "User login with valid session id and project key",
+            "match": {
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_project_key()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 28000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user calls \"GetProjectRolesAPI\" with \"GET\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetProjectRolesAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T22:28:43.415Z",
+        "line": 53,
+        "name": "Delete a Project in the Jira",
+        "description": "",
+        "id": "validating-jira-issue-api-s;delete-a-project-in-the-jira",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "User login with valid session id and valid \"project_id\" and Delete a project",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"project_id\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_login_with_valid_session_id_and_valid_and_delete_a_project(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user calls \"DeleteProjectAPI\" with \"DELETE\" http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeleteProjectAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"DELETE\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the API call got success with status code 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.stepDefinitions.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Jira Issue API\u0027s",
+    "description": "",
+    "id": "validating-jira-issue-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/JiraProjectAPI.feature",
+    "tags": []
+  }
+]

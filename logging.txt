@@ -15,36 +15,184 @@ Body:
     "password": "admin@123"
 }
 HTTP/1.1 200 
-X-AREQUESTID: 953x192x1
+X-AREQUESTID: 148x82x1
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_137c30cac6494d948ebbbdf7b1a3baf79cbe5b83_lout; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_5b7e65b0557c4b3c98301a2fede4df8ee90f5015_lout; Path=/
 X-AUSERNAME: anonymous
-Set-Cookie: JSESSIONID=65419205BE417148260018BC7013227C; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=141E40F748C199904A587BE22FBC4E6D; Path=/; HttpOnly
 X-Seraph-LoginReason: OK
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:55 GMT
+Date: Fri, 10 Jul 2020 22:28:18 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
     "session": {
         "name": "JSESSIONID",
-        "value": "65419205BE417148260018BC7013227C"
+        "value": "141E40F748C199904A587BE22FBC4E6D"
     },
     "loginInfo": {
-        "failedLoginCount": 4,
-        "loginCount": 163,
-        "lastFailedLoginTime": "2020-07-06T14:36:38.692+0400",
-        "previousLoginTime": "2020-07-07T15:48:54.957+0400"
+        "failedLoginCount": 56,
+        "loginCount": 291,
+        "lastFailedLoginTime": "2020-07-11T02:26:26.340+0400",
+        "previousLoginTime": "2020-07-11T02:27:45.728+0400"
     }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/group?groupname=jira-administrators&expand=users
+Proxy:			<none>
+Request params:	<none>
+Query params:	groupname=jira-administrators
+				expand=users
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x83x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_350cafd7a1e236bd5b9c6c47924c1260b88d26f2_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:19 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "name": "jira-administrators",
+    "self": "http://localhost:8080/rest/api/2/group?groupname=jira-administrators",
+    "users": {
+        "size": 2,
+        "items": [
+            {
+                "self": "http://localhost:8080/rest/api/2/user?username=AnkitBhardwaj",
+                "name": "AnkitBhardwaj",
+                "key": "JIRAUSER10100",
+                "emailAddress": "ankitbhardwaj9689@gmail.com",
+                "avatarUrls": {
+                    "48x48": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=48",
+                    "24x24": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=24",
+                    "16x16": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=16",
+                    "32x32": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=32"
+                },
+                "displayName": "Ankit Bhardwaj",
+                "active": true,
+                "timeZone": "Asia/Muscat"
+            },
+            {
+                "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+                "name": "manali.malkani",
+                "key": "JIRAUSER10000",
+                "emailAddress": "manali.malkani@atlassian.com",
+                "avatarUrls": {
+                    "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+                    "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+                    "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+                    "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+                },
+                "displayName": "Manali of Atlassian",
+                "active": true,
+                "timeZone": "Asia/Muscat"
+            }
+        ],
+        "max-results": 50,
+        "start-index": 0,
+        "end-index": 1
+    },
+    "expand": "users"
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/group/member?groupname=jira-administrators&expand=users
+Proxy:			<none>
+Request params:	<none>
+Query params:	groupname=jira-administrators
+				expand=users
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x84x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_7a82ac1e04b56629241fa06dfad4a42bd5d77aae_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:19 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "self": "http://localhost:8080/rest/api/2/group/member?includeInactiveUsers=false&maxResults=50&groupname=jira-administrators&startAt=0",
+    "maxResults": 50,
+    "startAt": 0,
+    "total": 2,
+    "isLast": true,
+    "values": [
+        {
+            "self": "http://localhost:8080/rest/api/2/user?username=AnkitBhardwaj",
+            "name": "AnkitBhardwaj",
+            "key": "JIRAUSER10100",
+            "emailAddress": "ankitbhardwaj9689@gmail.com",
+            "avatarUrls": {
+                "48x48": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=48",
+                "24x24": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=24",
+                "16x16": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=16",
+                "32x32": "https://www.gravatar.com/avatar/dcdd82ae5bfe4e8915b8effde51f6df0?d=mm&s=32"
+            },
+            "displayName": "Ankit Bhardwaj",
+            "active": true,
+            "timeZone": "Asia/Muscat"
+        },
+        {
+            "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+            "name": "manali.malkani",
+            "key": "JIRAUSER10000",
+            "emailAddress": "manali.malkani@atlassian.com",
+            "avatarUrls": {
+                "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+                "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+                "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+                "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+            },
+            "displayName": "Manali of Atlassian",
+            "active": true,
+            "timeZone": "Asia/Muscat"
+        }
+    ]
 }
 Request method:	GET
 Request URI:	http://localhost:8080/rest/api/2/myself
@@ -59,22 +207,22 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 953x193x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x85x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_cc31147f6cb2764d887bf1d51110e387b3dc1106_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_2cf82e9c0341dadc04dccfb3b4c0fb2ccf2c317b_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:57 GMT
+Date: Fri, 10 Jul 2020 22:28:19 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
@@ -126,22 +274,22 @@ Body:
     "displayName": "Manali of Atlassian"
 }
 HTTP/1.1 200 
-X-AREQUESTID: 953x194x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x86x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_49b59d45800cedb9e0c5af61ed9ce33973f5da87_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_46fcd2c47da583c62c5692ace3721a26514c49c3_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:57 GMT
+Date: Fri, 10 Jul 2020 22:28:19 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
@@ -200,37 +348,68 @@ Body:
     }
 }
 HTTP/1.1 201 
-X-AREQUESTID: 953x195x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x87x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_0f9d349aca8d7b03d20050bf54e8b0d3ea1f6dd5_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_10110cb4e8928b3db947e735e3d7219d982c04fc_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:57 GMT
+Date: Fri, 10 Jul 2020 22:28:21 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
-    "id": "10313",
-    "key": "RES-108",
-    "self": "http://localhost:8080/rest/api/2/issue/10313"
+    "id": "10701",
+    "key": "RES-163",
+    "self": "http://localhost:8080/rest/api/2/issue/10701"
 }
-Request method:	POST
-Request URI:	http://localhost:8080/rest/api/2/issue/10313/comment
+Request method:	PUT
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/assignee
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	key=10313
+Path params:	key=10701
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "manali.malkani"
+}
+HTTP/1.1 204 
+X-AREQUESTID: 148x88x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_478496cc217d6dc235a0f535ec69df9b48d91823_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 10 Jul 2020 22:28:21 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+Request method:	POST
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/comment
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
 Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
@@ -244,29 +423,29 @@ Body:
     }
 }
 HTTP/1.1 201 
-X-AREQUESTID: 953x196x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x89x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_5da103e866aa0bd4a7e010c5a381d86d6b9abbf1_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_9e3d29748de538aa9fc0989122f6c375477ca131_lin; Path=/
 X-AUSERNAME: manali.malkani
-Location: http://localhost:8080/rest/api/2/issue/10313/comment/10213
+Location: http://localhost:8080/rest/api/2/issue/10701/comment/10601
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:58 GMT
+Date: Fri, 10 Jul 2020 22:28:22 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
-    "self": "http://localhost:8080/rest/api/2/issue/10313/comment/10213",
-    "id": "10213",
+    "self": "http://localhost:8080/rest/api/2/issue/10701/comment/10601",
+    "id": "10601",
     "author": {
         "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
         "name": "manali.malkani",
@@ -298,20 +477,399 @@ Connection: keep-alive
         "active": true,
         "timeZone": "Asia/Muscat"
     },
-    "created": "2020-07-07T15:53:58.209+0400",
-    "updated": "2020-07-07T15:53:58.209+0400",
+    "created": "2020-07-11T02:28:21.523+0400",
+    "updated": "2020-07-11T02:28:21.523+0400",
     "visibility": {
         "type": "role",
         "value": "Administrators"
     }
 }
-Request method:	POST
-Request URI:	http://localhost:8080/rest/api/2/issue/10313/attachments
+Request method:	PUT
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/comment/10601
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	key=10313
+Path params:	key=10701
+				id=10601
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "body": "nullupdate",
+    "visibility": {
+        "type": "role",
+        "value": "Administrators"
+    }
+}
+HTTP/1.1 200 
+X-AREQUESTID: 148x90x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_97314e201f066eec054822095f16f791c837bb6f_lin; Path=/
+X-AUSERNAME: manali.malkani
+Location: http://localhost:8080/rest/api/2/issue/10701/comment/10601
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:22 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "self": "http://localhost:8080/rest/api/2/issue/10701/comment/10601",
+    "id": "10601",
+    "author": {
+        "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+        "name": "manali.malkani",
+        "key": "JIRAUSER10000",
+        "emailAddress": "manali.malkani@atlassian.com",
+        "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+        },
+        "displayName": "Manali of Atlassian",
+        "active": true,
+        "timeZone": "Asia/Muscat"
+    },
+    "body": "nullupdate",
+    "updateAuthor": {
+        "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+        "name": "manali.malkani",
+        "key": "JIRAUSER10000",
+        "emailAddress": "manali.malkani@atlassian.com",
+        "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+        },
+        "displayName": "Manali of Atlassian",
+        "active": true,
+        "timeZone": "Asia/Muscat"
+    },
+    "created": "2020-07-11T02:28:21.523+0400",
+    "updated": "2020-07-11T02:28:22.228+0400",
+    "visibility": {
+        "type": "role",
+        "value": "Administrators"
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/comment/10601
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
+				id=10601
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x91x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_343283987aeabcba04606394cb166bc70d5f8479_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:22 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "self": "http://localhost:8080/rest/api/2/issue/10701/comment/10601",
+    "id": "10601",
+    "author": {
+        "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+        "name": "manali.malkani",
+        "key": "JIRAUSER10000",
+        "emailAddress": "manali.malkani@atlassian.com",
+        "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+        },
+        "displayName": "Manali of Atlassian",
+        "active": true,
+        "timeZone": "Asia/Muscat"
+    },
+    "body": "nullupdate",
+    "updateAuthor": {
+        "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+        "name": "manali.malkani",
+        "key": "JIRAUSER10000",
+        "emailAddress": "manali.malkani@atlassian.com",
+        "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+        },
+        "displayName": "Manali of Atlassian",
+        "active": true,
+        "timeZone": "Asia/Muscat"
+    },
+    "created": "2020-07-11T02:28:21.523+0400",
+    "updated": "2020-07-11T02:28:22.228+0400",
+    "visibility": {
+        "type": "role",
+        "value": "Administrators"
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/status
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x92x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_4665e21a3ce9bde52eb9ff41e212417b38d6f773_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:23 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+[
+    {
+        "self": "http://localhost:8080/rest/api/2/status/3",
+        "description": "This issue is being actively worked on at the moment by the assignee.",
+        "iconUrl": "http://localhost:8080/images/icons/statuses/inprogress.png",
+        "name": "In Progress",
+        "id": "3",
+        "statusCategory": {
+            "self": "http://localhost:8080/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+        }
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/status/10000",
+        "description": "",
+        "iconUrl": "http://localhost:8080/",
+        "name": "To Do",
+        "id": "10000",
+        "statusCategory": {
+            "self": "http://localhost:8080/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+        }
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/status/10001",
+        "description": "",
+        "iconUrl": "http://localhost:8080/",
+        "name": "Done",
+        "id": "10001",
+        "statusCategory": {
+            "self": "http://localhost:8080/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
+        }
+    }
+]
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/status/To%20Do
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	name=To Do
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x93x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_132f7b1e87eac1c859223d6435298eb98cf761a8_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:23 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "self": "http://localhost:8080/rest/api/2/status/10000",
+    "description": "",
+    "iconUrl": "http://localhost:8080/",
+    "name": "To Do",
+    "id": "10000",
+    "statusCategory": {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/statuscategory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x94x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_6f9e465b86f87aa4a6955167d6d2c838de3eb5b9_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:23 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+[
+    {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/1",
+        "id": 1,
+        "key": "undefined",
+        "colorName": "medium-gray",
+        "name": "No Category"
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/4",
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+    }
+]
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/statuscategory/new
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=new
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x95x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_b3ccdfe5d0b36c314910dbbc22a4a294af093c21_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:23 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "self": "http://localhost:8080/rest/api/2/statuscategory/2",
+    "id": 2,
+    "key": "new",
+    "colorName": "blue-gray",
+    "name": "To Do"
+}
+Request method:	POST
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/attachments
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
 Headers:		X-Atlassian-Token=no-check
 				Accept=*/*
 				Content-Type=multipart/form-data
@@ -323,29 +881,29 @@ Multiparts:		------------
 				jira.txt
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 953x197x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x96x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_e4d4524f4cc450c370b62833e7d3fcba57097066_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_43b333cf49f28e11c2849bd6f8066b129714a1cd_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:58 GMT
+Date: Fri, 10 Jul 2020 22:28:23 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 [
     {
-        "self": "http://localhost:8080/rest/api/2/attachment/10213",
-        "id": "10213",
+        "self": "http://localhost:8080/rest/api/2/attachment/10601",
+        "id": "10601",
         "filename": "jira.txt",
         "author": {
             "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
@@ -362,46 +920,46 @@ Connection: keep-alive
             "active": true,
             "timeZone": "Asia/Muscat"
         },
-        "created": "2020-07-07T15:53:59.090+0400",
+        "created": "2020-07-11T02:28:23.696+0400",
         "size": 31,
         "mimeType": "text/plain",
-        "content": "http://localhost:8080/secure/attachment/10213/jira.txt"
+        "content": "http://localhost:8080/secure/attachment/10601/jira.txt"
     }
 ]
 Request method:	GET
-Request URI:	http://localhost:8080/rest/api/2/attachment/10213
+Request URI:	http://localhost:8080/rest/api/2/attachment/10601
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=10213
+Path params:	id=10601
 Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 953x198x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x97x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_bf57d1add335c8e331040dc9639bf7b46406ba30_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_08a4d62a462ce255cc9dc10575718a9e2bdf316e_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:58 GMT
+Date: Fri, 10 Jul 2020 22:28:24 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
-    "self": "http://localhost:8080/rest/api/2/attachment/10213",
+    "self": "http://localhost:8080/rest/api/2/attachment/10601",
     "filename": "jira.txt",
     "author": {
         "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
@@ -416,51 +974,119 @@ Connection: keep-alive
         "displayName": "Manali of Atlassian",
         "active": true
     },
-    "created": "2020-07-07T15:53:59.090+0400",
+    "created": "2020-07-11T02:28:23.696+0400",
     "size": 31,
     "mimeType": "text/plain",
     "properties": {
         
     },
-    "content": "http://localhost:8080/secure/attachment/10213/jira.txt"
+    "content": "http://localhost:8080/secure/attachment/10601/jira.txt"
 }
-Request method:	GET
-Request URI:	http://localhost:8080/rest/api/2/issue/10313
+Request method:	DELETE
+Request URI:	http://localhost:8080/rest/api/2/attachment/10601
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	key=10313
+Path params:	id=10601
 Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 200 
-X-AREQUESTID: 953x199x1
-X-ASESSIONID: 16gwqw6
+HTTP/1.1 204 
+X-AREQUESTID: 148x98x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_2cb180dcc5711f2c44731d2aca6c4cad3d734ac9_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_9c16709a3007461162c7cb83ced6a9407eee4db4_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 10 Jul 2020 22:28:24 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+Request method:	PUT
+Request URI:	http://localhost:8080/rest/api/2/issue/10701
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "fields": {
+        "project": {
+            "key": "RES"
+        },
+        "summary": "Manali Rest API Automation Testing",
+        "description": "Rest API Automation",
+        "issuetype": {
+            "name": "Bug"
+        }
+    }
+}
+HTTP/1.1 204 
+X-AREQUESTID: 148x99x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_02a13275f0b3d91e1715d837873b059a0f6b95d4_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 10 Jul 2020 22:28:25 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/issue/10701
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x100x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_97bd31fc1d27df0929224e56d3193db001eb4023_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:58 GMT
+Date: Fri, 10 Jul 2020 22:28:25 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
     "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
-    "id": "10313",
-    "self": "http://localhost:8080/rest/api/2/issue/10313",
-    "key": "RES-108",
+    "id": "10701",
+    "self": "http://localhost:8080/rest/api/2/issue/10701",
+    "key": "RES-163",
     "fields": {
         "issuetype": {
             "self": "http://localhost:8080/rest/api/2/issuetype/10004",
@@ -476,7 +1102,7 @@ Connection: keep-alive
         ],
         "timespent": null,
         "timeoriginalestimate": null,
-        "description": "API Automation",
+        "description": "Rest API Automation",
         "project": {
             "self": "http://localhost:8080/rest/api/2/project/10000",
             "id": "10000",
@@ -502,38 +1128,15 @@ Connection: keep-alive
         "customfield_10104": null,
         "customfield_10105": "0|i0002n:",
         "attachment": [
-            {
-                "self": "http://localhost:8080/rest/api/2/attachment/10213",
-                "id": "10213",
-                "filename": "jira.txt",
-                "author": {
-                    "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
-                    "name": "manali.malkani",
-                    "key": "JIRAUSER10000",
-                    "emailAddress": "manali.malkani@atlassian.com",
-                    "avatarUrls": {
-                        "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
-                        "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
-                        "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
-                        "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
-                    },
-                    "displayName": "Manali of Atlassian",
-                    "active": true,
-                    "timeZone": "Asia/Muscat"
-                },
-                "created": "2020-07-07T15:53:59.090+0400",
-                "size": 31,
-                "mimeType": "text/plain",
-                "content": "http://localhost:8080/secure/attachment/10213/jira.txt"
-            }
+            
         ],
         "aggregatetimeestimate": null,
         "resolutiondate": null,
         "workratio": -1,
-        "summary": "Manali Automation Testing",
+        "summary": "Manali Rest API Automation Testing",
         "lastViewed": null,
         "watches": {
-            "self": "http://localhost:8080/rest/api/2/issue/RES-108/watchers",
+            "self": "http://localhost:8080/rest/api/2/issue/RES-163/watchers",
             "watchCount": 1,
             "isWatching": true
         },
@@ -555,7 +1158,7 @@ Connection: keep-alive
         "subtasks": [
             
         ],
-        "created": "2020-07-07T15:53:57.487+0400",
+        "created": "2020-07-11T02:28:20.386+0400",
         "reporter": {
             "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
             "name": "manali.malkani",
@@ -571,7 +1174,7 @@ Connection: keep-alive
             "active": true,
             "timeZone": "Asia/Muscat"
         },
-        "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@15da9a6d[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@23138066[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@3f42ea3[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@3c5b9e0b[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@50c6aa6a[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@74b5620c[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5616db0f[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@365dbc00[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@532dc55b[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@c576830[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6c791416[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@379f1825[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+        "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@3be8a3a8[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5f29084[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2f6aa999[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@3e8d6a40[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@57f1b011[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@b63a144[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@713ff7d0[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@24355cdd[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@7e9e1172[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@6861e664[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@66ee1dcf[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@68b3767b[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
         "aggregateprogress": {
             "progress": 0,
             "total": 0
@@ -600,8 +1203,8 @@ Connection: keep-alive
         "comment": {
             "comments": [
                 {
-                    "self": "http://localhost:8080/rest/api/2/issue/10313/comment/10213",
-                    "id": "10213",
+                    "self": "http://localhost:8080/rest/api/2/issue/10701/comment/10601",
+                    "id": "10601",
                     "author": {
                         "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
                         "name": "manali.malkani",
@@ -617,7 +1220,7 @@ Connection: keep-alive
                         "active": true,
                         "timeZone": "Asia/Muscat"
                     },
-                    "body": "Jira API automation",
+                    "body": "nullupdate",
                     "updateAuthor": {
                         "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
                         "name": "manali.malkani",
@@ -633,8 +1236,8 @@ Connection: keep-alive
                         "active": true,
                         "timeZone": "Asia/Muscat"
                     },
-                    "created": "2020-07-07T15:53:58.209+0400",
-                    "updated": "2020-07-07T15:53:58.209+0400",
+                    "created": "2020-07-11T02:28:21.523+0400",
+                    "updated": "2020-07-11T02:28:22.228+0400",
                     "visibility": {
                         "type": "role",
                         "value": "Administrators"
@@ -649,7 +1252,7 @@ Connection: keep-alive
             
         ],
         "votes": {
-            "self": "http://localhost:8080/rest/api/2/issue/RES-108/votes",
+            "self": "http://localhost:8080/rest/api/2/issue/RES-163/votes",
             "votes": 0,
             "hasVoted": false
         },
@@ -661,9 +1264,23 @@ Connection: keep-alive
                 
             ]
         },
-        "assignee": null,
+        "assignee": {
+            "self": "http://localhost:8080/rest/api/2/user?username=manali.malkani",
+            "name": "manali.malkani",
+            "key": "JIRAUSER10000",
+            "emailAddress": "manali.malkani@atlassian.com",
+            "avatarUrls": {
+                "48x48": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=48",
+                "24x24": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=24",
+                "16x16": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=16",
+                "32x32": "https://www.gravatar.com/avatar/626ff514789e2f5470ce85f3fe13fe64?d=mm&s=32"
+            },
+            "displayName": "Manali of Atlassian",
+            "active": true,
+            "timeZone": "Asia/Muscat"
+        },
         "archivedby": null,
-        "updated": "2020-07-07T15:53:59.112+0400",
+        "updated": "2020-07-11T02:28:24.954+0400",
         "status": {
             "self": "http://localhost:8080/rest/api/2/status/10000",
             "description": "",
@@ -680,32 +1297,994 @@ Connection: keep-alive
         }
     }
 }
-Request method:	DELETE
-Request URI:	http://localhost:8080/rest/api/2/issue/10313?deleteSubtasks=true
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/workflow
 Proxy:			<none>
 Request params:	<none>
-Query params:	deleteSubtasks=true
+Query params:	<none>
 Form params:	<none>
-Path params:	key=10313
+Path params:	<none>
 Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 204 
-X-AREQUESTID: 953x200x1
-X-ASESSIONID: 16gwqw6
+HTTP/1.1 200 
+X-AREQUESTID: 148x101x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_c9a1ae01fc244b994feb4eeedbc081de0e558a8a_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_7f7b82ae61fe02930b78e35d0155baabe7b8d918_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:25 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+[
+    {
+        "name": "jira",
+        "description": "The default Jira workflow",
+        "steps": 5,
+        "default": true
+    },
+    {
+        "name": "classic default workflow",
+        "description": "The classic Jira default workflow",
+        "steps": 5,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow",
+        "description": "",
+        "lastModifiedDate": "5 days ago 3:40 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (1)",
+        "description": "",
+        "lastModifiedDate": "5 days ago 6:32 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (10)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 1:17 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (11)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 2:33 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (12)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 2:33 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (13)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 2:36 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (14)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 2:37 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (15)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:22 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (16)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:23 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (17)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 4:01 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (18)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 4:07 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (19)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 4:10 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (2)",
+        "description": "",
+        "lastModifiedDate": "5 days ago 6:37 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (20)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 4:11 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (21)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 4:12 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (22)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 2:55 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (23)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:04 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (24)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:16 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (25)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:16 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (26)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:19 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (27)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:19 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (28)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:24 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (29)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:25 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (3)",
+        "description": "",
+        "lastModifiedDate": "5 days ago 6:42 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (30)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:29 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (31)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:36 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (32)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:38 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (33)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:46 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (34)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:48 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (35)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 3:54 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (36)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 10:50 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (37)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 10:51 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (38)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 10:51 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (39)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 11:29 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (4)",
+        "description": "",
+        "lastModifiedDate": "5 days ago 6:43 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (40)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 11:30 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (41)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 12:55 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (42)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 1:05 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (43)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 2:23 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (44)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 2:27 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (45)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 2:29 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (46)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:47 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (47)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:48 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (48)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:51 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (49)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:53 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (5)",
+        "description": "",
+        "lastModifiedDate": "5 days ago 6:46 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (50)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 1:38 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (51)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 1:40 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (52)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 1:41 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (53)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:15 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (54)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:16 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (55)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:18 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (56)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:22 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (57)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:31 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (58)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 3:33 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (59)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 6:45 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (6)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 12:36 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (60)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 6:46 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (61)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 6:48 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (62)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 6:48 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (63)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 6:51 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (64)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 9:06 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (65)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 9:11 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (66)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:26 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (67)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:27 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (68)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:28 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (69)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:42 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (7)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 12:41 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (70)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:42 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (71)",
+        "description": "",
+        "lastModifiedDate": "3 days ago 11:43 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (72)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 2:27 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (73)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 3:12 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (74)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 3:25 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (75)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 3:28 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (76)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 4:16 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (77)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 4:18 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (78)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 4:46 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (79)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 4:52 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (8)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 12:43 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (80)",
+        "description": "",
+        "lastModifiedDate": "2 days ago 4:54 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (81)",
+        "description": "",
+        "lastModifiedDate": "Yesterday 12:08 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (82)",
+        "description": "",
+        "lastModifiedDate": "Yesterday 12:13 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (83)",
+        "description": "",
+        "lastModifiedDate": "Yesterday 4:58 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (84)",
+        "description": "",
+        "lastModifiedDate": "Yesterday 7:45 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (85)",
+        "description": "",
+        "lastModifiedDate": "Yesterday 11:56 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (86)",
+        "description": "",
+        "lastModifiedDate": "2 hours ago",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (87)",
+        "description": "",
+        "lastModifiedDate": "1 hour ago",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (88)",
+        "description": "",
+        "lastModifiedDate": "9 minutes ago",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (89)",
+        "description": "",
+        "lastModifiedDate": "Just now",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "EX: Project Management Workflow (9)",
+        "description": "",
+        "lastModifiedDate": "4 days ago 1:13 AM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    },
+    {
+        "name": "Software Simplified Workflow for Project RES",
+        "description": "Generated by JIRA Software version 8.10.0. This workflow is managed internally by Jira Software. Do not manually modify this workflow.",
+        "lastModifiedDate": "26/Jun/20 6:40 PM",
+        "lastModifiedUser": "Manali of Atlassian",
+        "steps": 3,
+        "default": false
+    }
+]
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/issuetype
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x102x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_fcb2458df2cc0b7a47e432447c3c4f233982adc6_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:25 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+[
+    {
+        "self": "http://localhost:8080/rest/api/2/issuetype/10003",
+        "id": "10003",
+        "description": "A task that needs to be done.",
+        "iconUrl": "http://localhost:8080/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+        "name": "Task",
+        "subtask": false,
+        "avatarId": 10318
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/issuetype/10000",
+        "id": "10000",
+        "description": "The sub-task of the issue",
+        "iconUrl": "http://localhost:8080/images/icons/issuetypes/subtask_alternate.png",
+        "name": "Sub-task",
+        "subtask": true
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/issuetype/10002",
+        "id": "10002",
+        "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+        "iconUrl": "http://localhost:8080/images/icons/issuetypes/story.svg",
+        "name": "Story",
+        "subtask": false
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/issuetype/10004",
+        "id": "10004",
+        "description": "A problem which impairs or prevents the functions of the product.",
+        "iconUrl": "http://localhost:8080/secure/viewavatar?size=xsmall&avatarId=10303&avatarType=issuetype",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303
+    },
+    {
+        "self": "http://localhost:8080/rest/api/2/issuetype/10001",
+        "id": "10001",
+        "description": "Created by Jira Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+        "iconUrl": "http://localhost:8080/images/icons/issuetypes/epic.svg",
+        "name": "Epic",
+        "subtask": false
+    }
+]
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/notificationscheme
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x103x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_178e856be3a7dde6dfd3be27a1d48c681f1350c6_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:25 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "maxResults": 50,
+    "startAt": 0,
+    "total": 1,
+    "isLast": true,
+    "values": [
+        {
+            "expand": "notificationSchemeEvents,user,group,projectRole,field,all",
+            "id": 10000,
+            "self": "http://localhost:8080/rest/api/2/notificationscheme/10000",
+            "name": "Default Notification Scheme"
+        }
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/application-properties
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 
+X-AREQUESTID: 148x104x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_390416e59c75d45c19a65329207c5f669b42ea81_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-transform
+Vary: User-Agent
+WWW-Authenticate: OAuth realm="http%3A%2F%2Flocalhost%3A8080"
+Content-Encoding: gzip
+Content-Type: application/xml;charset=UTF-8
+Content-Length: 136
+Date: Fri, 10 Jul 2020 22:28:37 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+<status>
+  <status-code>401</status-code>
+  <message>This resource requires WebSudo.</message>
+</status>
+Request method:	DELETE
+Request URI:	http://localhost:8080/rest/api/2/issue/10701/comment/10601
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=10701
+				id=10601
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 
+X-AREQUESTID: 148x105x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_65b3a71051daa17e36f507a0f7da0d80ed6e9f50_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Type: application/json;charset=UTF-8
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:37 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+Request method:	DELETE
+Request URI:	http://localhost:8080/rest/api/2/issue/10701?deleteSubtasks=true
+Proxy:			<none>
+Request params:	<none>
+Query params:	deleteSubtasks=true
+Form params:	<none>
+Path params:	key=10701
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 
+X-AREQUESTID: 148x106x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_8906583d0dfbffb5f3ab2fccb34afa8a82335f75_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 10 Jul 2020 22:28:37 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 Request method:	GET
@@ -721,22 +2300,22 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 954x201x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x107x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_51e123c3d2c512cdc8468ecfb716d73f5e355981_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_b8dfc0294f2279b8b16900d891c109d567affb05_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:37 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
@@ -1379,29 +2958,29 @@ Body:
     "assigneeType": "PROJECT_LEAD"
 }
 HTTP/1.1 201 
-X-AREQUESTID: 954x202x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x108x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_1a10959f3e00c9340d4f5fc8e31d963377374e3e_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_de4fdc169d3270b0864ba7dca1b6fed798f26a4a_lin; Path=/
 X-AUSERNAME: manali.malkani
-Location: http://localhost:8080/rest/api/2/project/10213
+Location: http://localhost:8080/rest/api/2/project/10601
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:43 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
-    "self": "http://localhost:8080/rest/api/2/project/10213",
-    "id": 10213,
+    "self": "http://localhost:8080/rest/api/2/project/10601",
+    "id": 10601,
     "key": "EX"
 }
 Request method:	PUT
@@ -1427,29 +3006,29 @@ Body:
     "assigneeType": "PROJECT_LEAD"
 }
 HTTP/1.1 200 
-X-AREQUESTID: 954x203x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x109x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_ba607fb97243d74ca4c557f8a99f635952c2bc59_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_0a87e7152ead6628e1f73589da41550ab3379106_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:43 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
     "expand": "description,lead,url,projectKeys",
-    "self": "http://localhost:8080/rest/api/2/project/10213",
-    "id": "10213",
+    "self": "http://localhost:8080/rest/api/2/project/10601",
+    "id": "10601",
     "key": "EX",
     "description": "Example Project description",
     "lead": {
@@ -1494,7 +3073,7 @@ Connection: keep-alive
     ],
     "name": "Example",
     "roles": {
-        "Administrators": "http://localhost:8080/rest/api/2/project/10213/role/10002"
+        "Administrators": "http://localhost:8080/rest/api/2/project/10601/role/10002"
     },
     "avatarUrls": {
         "48x48": "http://localhost:8080/secure/projectavatar?avatarId=10324",
@@ -1518,30 +3097,30 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 954x204x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x110x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_5e401044d3c22ebb38bc0964349ee11f65179a0b_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_7e074eadef0e3668787b6a30d978468fedcefba3_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:43 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 [
     {
         "expand": "description,lead,url,projectKeys",
-        "self": "http://localhost:8080/rest/api/2/project/10213",
-        "id": "10213",
+        "self": "http://localhost:8080/rest/api/2/project/10601",
+        "id": "10601",
         "key": "EX",
         "name": "Example",
         "avatarUrls": {
@@ -1580,29 +3159,29 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 
-X-AREQUESTID: 954x205x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x111x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_51b3162c06b4b3e7e339aac9cdd45368afdc1c1b_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_5f9355d6480df47d68757b6e82819d3ad92c224c_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Encoding: gzip
 Vary: User-Agent
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Tue, 07 Jul 2020 11:53:59 GMT
+Date: Fri, 10 Jul 2020 22:28:43 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
 
 {
     "expand": "description,lead,url,projectKeys",
-    "self": "http://localhost:8080/rest/api/2/project/10213",
-    "id": "10213",
+    "self": "http://localhost:8080/rest/api/2/project/10601",
+    "id": "10601",
     "key": "EX",
     "description": "Example Project description",
     "lead": {
@@ -1647,7 +3226,7 @@ Connection: keep-alive
     ],
     "name": "Example",
     "roles": {
-        "Administrators": "http://localhost:8080/rest/api/2/project/10213/role/10002"
+        "Administrators": "http://localhost:8080/rest/api/2/project/10601/role/10002"
     },
     "avatarUrls": {
         "48x48": "http://localhost:8080/secure/projectavatar?avatarId=10324",
@@ -1657,6 +3236,41 @@ Connection: keep-alive
     },
     "projectTypeKey": "business",
     "archived": false
+}
+Request method:	GET
+Request URI:	http://localhost:8080/rest/api/2/project/EX/role
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	key=EX
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-AREQUESTID: 148x112x1
+X-ASESSIONID: 1otl0r9
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-ASEN: SEN-L15656713
+X-Seraph-LoginReason: OK
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_79a396cb472185511b5d8a937f3f109af2f62c07_lin; Path=/
+X-AUSERNAME: manali.malkani
+Cache-Control: no-cache, no-store, no-transform
+Content-Encoding: gzip
+Vary: User-Agent
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 10 Jul 2020 22:28:43 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+{
+    "Administrators": "http://localhost:8080/rest/api/2/project/10601/role/10002"
 }
 Request method:	DELETE
 Request URI:	http://localhost:8080/rest/api/2/project/EX
@@ -1671,18 +3285,18 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 204 
-X-AREQUESTID: 954x206x1
-X-ASESSIONID: 16gwqw6
+X-AREQUESTID: 148x113x1
+X-ASESSIONID: 1otl0r9
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Content-Security-Policy: frame-ancestors 'self'
 X-ASEN: SEN-L15656713
 X-Seraph-LoginReason: OK
-Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_b00261baa24e87f3adefefae07abb380c1d95713_lin; Path=/
+Set-Cookie: atlassian.xsrf.token=B28K-I9HU-ES8G-IBT4_8ae7c8f6468d6947da4c242e8e94adc3bee0aa08_lin; Path=/
 X-AUSERNAME: manali.malkani
 Cache-Control: no-cache, no-store, no-transform
 Content-Type: application/json;charset=UTF-8
-Date: Tue, 07 Jul 2020 11:54:01 GMT
+Date: Fri, 10 Jul 2020 22:28:43 GMT
 Keep-Alive: timeout=20
 Connection: keep-alive
